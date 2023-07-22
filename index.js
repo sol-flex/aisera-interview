@@ -65,7 +65,7 @@ readableStream
 
     // Write user data to the output CSV file
     for(user in users) {
-
+        // Remove the {} from each end of the row
         let userTasks = JSON.stringify(users[user]).replace(/[{}]/g, '');
         writableStream.write(`${user}, ${userTasks}\n`); 
     }
